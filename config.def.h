@@ -9,7 +9,7 @@
 // Of course, I just put everything of my .xinitrc here so I have only a single
 // place to check. Only pulseaudio and xsettingsd were creating problems.
 const char *wallpaper[]  = {"nitrogen", "--restore", 0};
-const char *pulseaudio[] = {"start-pulseaudio-x11", 0};
+const char *pulseaudio[] = {"pulseaudio", "-D", 0};
 const char *keyring[] = {"gnome-keyring-daemon", 0};
 const char *xsettings[] = {"xsettingsd", 0};
 const char *status[] = {"slstatus", 0};
