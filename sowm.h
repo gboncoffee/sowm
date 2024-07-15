@@ -55,5 +55,6 @@ void win_next(const Arg arg);
 void win_init(void);
 void win_to_ws(const Arg arg);
 void ws_go(const Arg arg);
+void autostart_run(void);
 
 static int xerror() { return 0; }

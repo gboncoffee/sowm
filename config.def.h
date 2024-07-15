@@ -3,6 +3,27 @@
 
 #define MOD Mod4Mask
 
+// Start this shit after the window manager registered itself to avoid ghost
+// windows. Lmao, it's so funny that this is actually a problem in desktop
+// Linux.
+// Of course, I just put everything of my .xinitrc here so I have only a single
+// place to check. Only pulseaudio and xsettingsd were creating problems.
+const char *wallpaper[]  = {"nitrogen", "--restore", 0};
+const char *pulseaudio[] = {"start-pulseaudio-x11", 0};
+const char *keyring[] = {"gnome-keyring-daemon", 0};
+const char *xsettings[] = {"xsettingsd", 0};
+const char *status[] = {"slstatus", 0};
+const char *wwtobu[] = {"wwtobu", 0};
+const char **autostart[] = {
+    wallpaper,
+    pulseaudio,
+    keyring,
+    xsettings,
+    status,
+    wwtobu,
+    0,
+};
+
 const char* menu[]    = {"dmenu_run", 0};
 const char* term[]    = {"alacritty", 0};
 
